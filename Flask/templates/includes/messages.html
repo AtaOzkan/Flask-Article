@@ -1,0 +1,11 @@
+{% with messages = get_flashed_messages(with_categories=true) %}  <!--Flash yaparken bu olması lazım flask flash da yazıyor-->
+  {% if messages %}
+    
+    {% for category, message in messages %}
+        <div class="alert alert-{{category}}" role="alert">  <!--website.py deki success category oluyo süslü parantez kullanmak lazım-->
+        {{message}}
+        </div>
+    {% endfor %}
+    
+  {% endif %}
+{% endwith %}

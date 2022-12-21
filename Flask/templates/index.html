@@ -1,0 +1,14 @@
+{% extends 'layout.html' %}       <!--layoutu ekler-->
+
+{% block body %}
+<div class = "jumbotron text-center"> <!--jumbotron garip birşey ekler text center ise ortalar-->
+    <h3>Selamlar</h3>
+    <p>Merhabalar</p>
+</div>
+<ul>                       <!--<ul> etiketi sırasız bir liste(madde işaretli) tanımlar. Liste öğeleri oluşturmak için <li> etiketi kullanılır.--> 
+    {% for a  in article  %}
+        <li>Article Id:{{a.id}}- Tıtle:{{a.title}}- Content:{{a.content}}</li>     
+    {% endfor %}
+
+</ul>
+{% endblock  %}
